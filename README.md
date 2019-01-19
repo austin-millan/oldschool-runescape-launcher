@@ -32,7 +32,6 @@ $ oldschool_func
 $ P $ R $ O $ F $ I $ T
 ```
 
-
 ## Current Issues
 
 - No sound
