@@ -17,4 +17,4 @@ docker build --build-arg \
 docker run -d -P --name osrs osrs
 IP=$(docker port osrs 22 | awk -F ':' '{print $1}')
 PORT=$(docker port osrs 22 | awk -F ':' '{print $2}')
-ssh -X root@$IP -p $PORT
+ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -X root@$IP -p $PORT
