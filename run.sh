@@ -15,3 +15,6 @@ docker build --build-arg \
     -t osrs:latest \
     .
 docker run -d -P --name osrs osrs
+IP=$(docker port osrs 22 | awk -F ':' '{print $1}')
+PORT=$(docker port osrs 22 | awk -F ':' '{print $2}')
+ssh -X root@$IP -p $PORT
