@@ -29,7 +29,6 @@ To run a container, execute the supplied script `./run.sh`, or copy-paste the fo
 docker run -ti \
        -e DISPLAY=$DISPLAY \
        -v /tmp/.X11-unix:/tmp/.X11-unix \
-       oldschool-runescape-launcher:latest \
+       aamillan/oldschool-runescape-launcher \
        oldschool
-
 ```
