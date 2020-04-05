@@ -2,9 +2,6 @@
 
 This Dockerfile can be used to run the OldSchool RuneScape (OSRS) client in a docker container.
 
-This Dockerfile uses a snippet of code borrowed from [here](https://gist.github.com/udkyo/c20935c7577c71d634f0090ef6fa8393#file-dockerfile)
-for X11 forwarding.
-
 ## Requirements
 
 - Docker
