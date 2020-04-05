@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t osrs:latest .
+docker build -t oldschool-runescape-launcher:latest .

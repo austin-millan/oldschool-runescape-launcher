@@ -8,22 +8,31 @@ for X11 forwarding.
 ## Requirements
 
 - Docker
-- An ssh keypair (ideally in `~/.ssh/id_rsa.pub` on linux distros, or /c/Users/YOUR_USERNAME/.ssh/id_rsa.pub on Windows).
 
-## Usage
+## Build
 
-To build and run the container, execute the supplied script `./run.sh`. 
+### Option 1: Pull From Docker Registry
 
-This will run the container and publish it to a random port on the host computer, and then lastly will  begin the SSH connection.
-Something to note, the command avoids host authenticity checking to make the connection require
-little interaction.
-
-```
-$ ./run.sh
-$ oldschool
+```bash
+docker pull aamillan/oldschool-runescape-launcher
 ```
 
-## Current Issues
+### Option 2: Build it Yourself
 
-- OSRS client
-    - No sound
+```bash
+git clone https://github.com/austin-millan/oldschool-runescape-launcher.git && cd oldschool-runescape-launcher
+docker build -t oldschool-runescape-launcher:latest .
+```
+
+## Run
+
+To run a container, execute the supplied script `./run.sh`, or copy-paste the following command:
+
+```bash
+docker run -ti \
+       -e DISPLAY=$DISPLAY \
+       -v /tmp/.X11-unix:/tmp/.X11-unix \
+       oldschool-runescape-launcher:latest \
+       oldschool
+
+```
