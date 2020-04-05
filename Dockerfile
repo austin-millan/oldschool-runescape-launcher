@@ -56,6 +56,4 @@ RUN echo "#!/bin/bash\ncd ~/runescape/oldschool && java -Duser.home='.' -Djava.c
 RUN chmod +x /usr/bin/oldschool
 RUN /bin/bash -c "source ~/.bashrc"
 
-RUN apt-get install -y vim
-
 CMD ["/bin/bash", "oldschool"]
